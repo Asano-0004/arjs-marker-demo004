@@ -17,17 +17,16 @@ body, html { margin:0; padding:0; overflow:hidden; }
 <body> 
 <!-- arjs="sourceType: webcam;" で端末カメラを使用 --> 
 <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;"> 
-<!-- 既成のHIROマーカーを使う例 --> 
+<!-- 自分のマーカーを使う例 --> 
 <a-marker type="pattern" url="markers/pattern-mymaker004.patt"> 
-<!-- 原点に簡単な立方体を表示 --> 
-<a-box position="0 0.5 0" depth="1" height="1" width="1" color="#4CC3D9"></a-box> 
-<a-sphere position="1 1 0" radius="0.5" color="#EF2D5E"></a-sphere> 
-<a-text value="Hello AR.js" position="-0.8 1.8 0" color="#fff"></a-text> 
+<!-- 原点に簡単なめだまやきを表示 --> 
+<a-entity gltf-model="url(assets/medamayaki.glb)" position="0 0 0" scale="0.5 0.5 0.5"></a-entity> 
+<a-text value="Hello medamayaki" position="-0.8 1.8 0" color="#fff"></a-text> 
 </a-marker> 
 <!-- カメラ --> 
 <a-entity camera></a-entity> 
 </a-scene> 
-<div class="hint">マーカー（HIRO）をかざしてみてください</div> 
+<div class="hint">マーカー('∀'）をかざしてみてください</div> 
 </body> 
 </html> 
 
